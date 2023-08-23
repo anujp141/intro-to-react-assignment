@@ -44,16 +44,15 @@ function App() {
     },
   ];
   return (
-    <div className="App">
-      <header >
-        <h1 className="">User Profiles:</h1>
-      </header>
-      <div className="user-profile-wrapper">
-        {/* Render the array of users using the UserProfile in this div */}
-
+ <div className="app">
+      <h1>User Profiles</h1>
+      <div className="user-list">
+        {users.map((user, index) => (
+          <UserProfile key={index} user={user} />
+        ))}
       </div>
     </div>
   );
-}
+};
 
 export default App;
